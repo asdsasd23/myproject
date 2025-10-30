@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filim</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <ul>
+        <li class="nav"><a href="##">خانه</a></li>
+        <li class="nav"><a href="##">فیلم</a></li>
+        <li class="nav"><a href="##">سریال</a></li>
+        <li class="nav"><a href="##">ایرانی</a></li>
+        <li class="nav"><a href="##">خارجی</a></li>
+        <li class="nav"><a href="##">جست و جو</a></li>
+
+        <div class="dropdown">
+            <button class="drop_btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="35px" height="35px" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+                </svg>
+            </button>
+            <div class="dropdown-content">
+            <a href="#">خرید اشتراک</a>
+            <hr class="line">
+            <a href="#">اعضای فعلی</a>
+            <a href="#">عضو جدید</a>
+            <a href="#">حساب کاربری</a>
+            <a href="#">خروج</a>
+            </div>
+        </div>
+    </ul>
+    
+    <div class="img_center">
+        <div class="slide_show">
+            <img src="img1.jpg" style="width: 150%;">
+        </div>
+        <div class="slide_show">
+            <img src="img2.jpg" style="width: 100%;">
+        </div>
+        <div class="slide_show">
+            <img src="img3.jpg" style="width: 100%;">
+        </div>
+        <div class="slide_show">
+            <img src="img4.jpg" style="width: 100%;">
+        </div>
+        <div class="slide_show">
+            <img src="img5.jpg" style="width: 100%;">
+        </div>
+        <hr style="border: 1px solid #a495c8; width: 100%; margin-bottom: 1.5%;">
+        <div class="img_slide">
+            <div class="mini_slide">
+                <img src="img1.jpg" class="demo cursor" style="width: 70%;" onclick="img_click(1)" >
+            </div>
+            <div class="mini_slide">
+                <img src="img2.jpg" class="demo cursor" style="width: 70%;" onclick="img_click(2)" >
+            </div>
+            <div class="mini_slide">
+                <img src="img3.jpg" class="demo cursor" style="width: 70%;" onclick="img_click(3)" >
+            </div>
+            <div class="mini_slide">
+                <img src="img4.jpg" class="demo cursor" style="width: 70%;" onclick="img_click(4)" >
+            </div>
+            <div class="mini_slide">
+                <img src="img5.jpg" class="demo cursor" style="width: 70%;" onclick="img_click(5)" >
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function img_click(n) {
+        showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("slide_show");
+        let dots = document.getElementsByClassName("demo");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+}
+
+    </script>
+</body>
+</html>

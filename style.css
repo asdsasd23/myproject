@@ -1,0 +1,138 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #060608;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    border: 1px solid ;
+    background-color: #000000;
+}
+
+ul li a {
+    display: block;
+    color: #ddb3ae;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+ul li a:hover {
+  transition: all 0.6s ease;
+  background-color: #15093354;
+  color: #2370a1;
+}
+
+.drop_btn {
+  background-color: #00000000;
+  color: #2370a1;
+  padding: 10px;
+  font-size: 25px;
+  border-radius: 100%;
+  border: 1px solid #2370a1;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  left: 2%;
+  margin-right: auto;
+  margin-left: 2%;
+  display: block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #000000d2;
+  width: 300%;
+  top: 100%;
+  left: 2%;
+  z-index: 9999;
+  border-radius: 5%;
+}
+
+.dropdown-content a {
+  color: #ddb3ae;
+  font-size: 17px;
+  padding: 10% 15% 10% 15%;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #2371a163;
+  color: #ddb3ae;
+  border-radius: 5%;
+}
+
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .drop_btn {
+  color: #2370a1;
+}
+
+/* SlideShow Style */
+
+img {
+  vertical-align: middle;
+}
+
+.img_center {
+  /*display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;*/
+  width: 100%;
+  padding: 1%;
+  box-shadow: 0 0 50px #a495c8;
+  position: relative;
+}
+
+
+.slide_show img {
+  margin: 0 25%;
+  max-width: 50%;
+  height: auto;
+  border-radius: 10px;
+}
+ 
+.slide_show {
+  display: none;
+  margin: 2%;
+}
+
+.cursor {
+  cursor: pointer;
+  box-shadow: 0 0 25px #fad3ce;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+
+}
+.cursor:hover{
+  box-shadow: 0 0 50px #2370a1;
+  transition: scale(5.03);
+}
+
+.mini_slide {
+  margin-top: 5%;
+  float: left;
+  width: 20%;
+}
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
